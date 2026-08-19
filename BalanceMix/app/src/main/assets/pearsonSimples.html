@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta é a Calculadora Pearson Simples">
+    <meta name="author" content="Hilton Bruce">
+    <link rel="stylesheet" href="estilo/base.css">
+    <link rel="stylesheet" href="estilo/baseInicial.css">
+    <link rel="stylesheet" href="estilo/baseResponsiva.css">
+    <link rel="stylesheet" href="estilo/hamburguerMenu.css">
+    <link rel="stylesheet" href="estilo/pearsonSimples.css">
+    <link rel="stylesheet" href="estilo/scroll.css">
+    <link rel="stylesheet" href="estilo/confirmacao.css">
+    <title>Calculadora Pearson Simples</title>
+</head>
+
+<body>
+<!-- Barra de fundo -->
+<div class="top-bar"></div>
+
+<!-- Botão hamburguer com spans -->
+<div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- Sobreposição escura -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Menu superior -->
+<ul class="menu-superior" id="menu-superior">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="calculadoraPearson.html">Calculadora de Pearson</a></li>
+    <li><a href="requisitosNutricionais.html">Requisitos Nutricionais</a></li>
+    <li><a href="racoesMontadas.html">Rações Salvas</a></li>
+</ul>
+
+<!-- Conteúdo principal -->
+<main id="conteudo">
+    <h1><br>Calculadora Pearson Simples</h1>
+
+    <!-- Botão de retorno -->
+    <button id="voltarSeletor" type="button" onclick="voltarAoSeletor()">
+        ← Voltar ao seletor
+    </button>
+
+    <form id="pearsonForm">
+        <label for="nutrienteDesejado">Proteína Bruta (PB) desejada (%)</label>
+        <input type="number" id="nutrienteDesejado" step="0.01" readonly required  />
+
+        <!-- Ingrediente 1 -->
+        <label for="selectIngrediente1">Ingrediente 1:</label>
+        <div class="ingrediente-container">
+            <img id="icone1" src="images/ingredientes/padrao.png" class="ingrediente-icone" />
+            <select id="selectIngrediente1" required>
+                <option value="" disabled selected>Selecione o ingrediente</option>
+                <option value="milho">Milho</option>
+                <option value="farelo_soja">Farelo de Soja</option>
+                <option value="trigo">Farelo de Trigo</option>
+                <option value="algodao">Farelo de Algodão</option>
+            </select>
+            <input type="text" id="ingrediente1" placeholder="Nome do ingrediente" readonly required />
+            <input type="number" id="valor1" step="0.01" placeholder="% PB" readonly required />
+        </div>
+
+        <!-- Ingrediente 2 -->
+        <label for="selectIngrediente2">Ingrediente 2:</label>
+        <div class="ingrediente-container">
+            <img id="icone2" src="./images/ingredientes/padrao.png" class="ingrediente-icone" />
+            <select id="selectIngrediente2" required>
+                <option value="" disabled selected>Selecione o ingrediente</option>
+                <option value="milho">Milho</option>
+                <option value="farelo_soja">Farelo de Soja</option>
+                <option value="trigo">Farelo de Trigo</option>
+                <option value="algodao">Farelo de Algodão</option>
+            </select>
+            <input type="text" id="ingrediente2" placeholder="Nome do ingrediente" readonly required />
+            <input type="number" id="valor2" step="0.01" placeholder="% PB" readonly required />
+        </div>
+
+        <label>Quantidade Total (kg):</label>
+        <input type="number" id="quantidadeTotal" step="0.1" required />
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultadoPearson" class="hidden">
+        <h2>Relatório:</h2>
+        <p id="resultadoTexto"></p>
+        <button type="button" id="salvarRacaoSimples">Salvar Ração</button>
+    </div>
+
+        <!-- Tela de aviso/intermediária -->
+    <div id="telaAviso" class="hidden">
+        <div class="confirmacao-conteudo">
+            <h2 id="tituloAviso">Aviso</h2>
+            <p id="mensagemAviso">Mensagem de aviso aqui.</p>
+            <button id="btnConfirmarAviso">OK</button>
+            <button id="btnCancelarAviso" class="hidden">Cancelar</button>
+        </div>
+    </div>
+
+        <!-- Tela intermediária de confirmação -->
+    <div id="telaConfirmacao" class="hidden">
+        <div class="confirmacao-conteudo">
+            <h2>✅ Ração salva com sucesso!</h2>
+            <p>Sua ração foi armazenada e poderá ser consultada em “Rações Montadas”.</p>
+            <button id="btnVerRacoes">Ver Rações Salvas</button>
+            <button id="btnNovaRacao">Voltar ao Seletor</button>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer-nav"></footer>
+
+<script src="script/menuHamburguer.js"></script>
+<script src="script/seletorAnimais.js"></script>
+<script src="script/preIngredientes.js"></script>
+<script src="script/racoes.js"></script>
+<script src="script/pearson.js"></script>
+
+<!-- Script para capturar dados da URL -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const pb = params.get("PB");
+
+      if (pb) {
+        // Remove texto extra e deixa apenas o número
+        const pbNumber = parseFloat(pb.replace(/[^\d.]/g, ""));
+        if (!isNaN(pbNumber)) {
+          document.getElementById("nutrienteDesejado").value = pbNumber;
+        }
+      }
+    });
+
+    function voltarAoSeletor() {
+      window.location.href = "calculadoraPearson.html";
+    }
+</script>
+</body>
+
+</html>

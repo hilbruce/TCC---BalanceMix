@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Este é a tela de Requisitos Nutricionais">
+        <meta name="author" content="Hilton Bruce">
+        <link rel="stylesheet" href="estilo/base.css">
+        <link rel="stylesheet" href="estilo/baseInicial.css">
+        <link rel="stylesheet" href="estilo/baseResponsiva.css">
+        <link rel="stylesheet" href="estilo/hamburguerMenu.css">
+        <link rel="stylesheet" href="estilo/itensMain.css">
+        <link rel="stylesheet" href="estilo/scroll.css">
+        <link rel="stylesheet" href="estilo/footerBotoes.css">
+        <link rel="stylesheet" href="estilo/reqNutri.css">
+        <title>Requisitos Nutricionais</title>
+    </head>
+
+    <body>
+
+        <!-- Titulo da pagina -->
+        <header>
+            <h1 class="titulo-arrojado">Requisitos Nutricionais</h1>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <main class="container-nutricao" id="conteudo">
+            <!-- Barra de pesquisa -->
+            <div class="barra-superior-nutricao">
+                <input type="text" id="buscaAnimal" placeholder="Pesquisar animal..." />
+            </div>
+
+            <!-- Mensagem de aviso -->
+            <p id="mensagemAviso">
+                Animal não encontrado.
+            </p>
+
+            <!-- Cartões dos animais -->
+            <div class="carousel-nutricao" id="listaAnimais">
+                <section class="cartao-animal" data-nome="Galinhas Poedeiras" data-pb="16">
+                    <h2>Galinhas Poedeiras</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 16%</li>
+                        <li><strong>Energia Necessária:</strong> 2800 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Galinhas de Corte" data-pb="21">
+                    <h2>Galinhas de Corte (Frangos de Engorda)</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 21%</li>
+                        <li><strong>Energia Necessária:</strong> 3000 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Leitões Pos Desmame" data-pb="21">
+                    <h2>Suínos - Leitões (Pós-desmame)</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 20-22%</li>
+                        <li><strong>Energia Necessária:</strong> 3300 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Suínos em Crescimento" data-pb="18">
+                    <h2>Suínos em Crescimento</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 18%</li>
+                        <li><strong>Energia Necessária:</strong> 3200 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Suínos em Engorda" data-pb="16">
+                    <h2>Suínos - Engorda</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 16%</li>
+                        <li><strong>Energia Necessária:</strong> 3200 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Suínos em Terminação" data-pb="14">
+                    <h2>Suínos - Terminação</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 14%</li>
+                        <li><strong>Energia Necessária:</strong> 3250 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Gado Bezerros de corte" data-pb="14">
+                    <h2>Bezerros de Corte</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 14%</li>
+                        <li><strong>Energia Necessária:</strong> 2300 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Gado de Corte Adulto" data-pb="12">
+                    <h2>Gado de Corte Adulto</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 11-13%</li>
+                        <li><strong>Energia Necessária:</strong> 2200-2400 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Gado Leiteiro em Lactação" data-pb="17">
+                    <h2>Gado Leiteiro em Lactação</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 16-18%</li>
+                        <li><strong>Energia Necessária:</strong> 2700-3000 kcal/kg</li>
+                    </ul>
+                </section>
+
+                <section class="cartao-animal" data-nome="Gado de Dupla Aptidão" data-pb="14">
+                    <h2>Gado de Dupla Aptidão</h2>
+                    <ul>
+                        <li><strong>Proteína Bruta (PB):</strong> 13-15%</li>
+                        <li><strong>Energia Necessária:</strong> 2500-2700 kcal/kg</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Recomendações de Insumos -->
+            <section class="recomendacoes-insumos">
+                <h2>Recomendações de Insumos</h2>
+                <ul>
+                    <li><strong>Milho:</strong> Alta energia, baixa proteína (8%). Utilizado para fornecer calorias.</li>
+                    <li><strong>Farelo de Soja:</strong> Rica fonte de proteína (45-48%). Base de rações balanceadas.</li>
+                    <li><strong>Calcário Calcítico:</strong> Fonte de cálcio, usado principalmente para aves poedeiras.</li>
+                    <li><strong>Trigo ou Farelo de Trigo:</strong> Fornece energia e fibras em dietas mistas.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="bottom-nav">
+            <a href="index.html" class="nav-link" id="nav-inicio">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 12l2-2m0 0l7-7 7 7m-9 2v10m4 0V10m5 10h2a2 2 0 002-2v-7a2 2 0 00-.586-1.414L12 3 3.586 10.586A2 2 0 003 12v7a2 2 0 002 2h2" />
+                </svg>
+                <span>Início</span>
+            </a>
+
+            <a href="calculadoraPearson.html" class="nav-link" id="nav-calculadora">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5h6M9 9h6M9 13h6m-6 4h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
+                </svg>
+                <span>Calculadora</span>
+            </a>
+
+            <a href="requisitosNutricionais.html" class="nav-link" id="nav-requisitos">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M8 16h8M8 12h8M8 8h8M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+                <span>Requisitos</span>
+            </a>
+
+            <a href="racoesMontadas.html" class="nav-link" id="nav-racoes">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7M5 7h14" />
+                </svg>
+                <span>Rações</span>
+            </a>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="script/menuHamburguer.js"></script>
+        <script src="script/footerBotoes.js"></script>
+        <script src="script/navBarAtivo.js"></script>
+        <script src="script/buscaAnimal.js"></script>
+    </body>
+
+</html>

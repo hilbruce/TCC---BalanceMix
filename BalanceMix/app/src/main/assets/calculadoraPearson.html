@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta é a tela Calculadora Pearson">
+    <meta name="author" content="Hilton Bruce">
+    <link rel="stylesheet" href="estilo/base.css">
+    <link rel="stylesheet" href="estilo/baseInicial.css">
+    <link rel="stylesheet" href="estilo/baseResponsiva.css">
+    <link rel="stylesheet" href="estilo/hamburguerMenu.css">
+    <link rel="stylesheet" href="estilo/seletorAnimais.css">
+
+    <title>Inicial</title>
+</head>
+
+<body>
+
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo">
+        <!-- Tela de seleção de animal (interface inicial) -->
+        <div class="animal-selection slide-card" id="animalSelection">
+            <h2>Escolha o tipo de animal</h2>
+            <div class="animal-cards">
+                <div class="animal-card" onclick="selecionarAnimal('galinha')">
+                  <img src="images/animais/chicken.png" alt="Galinha">
+                  <p>Galinha</p>
+                </div>
+                <div class="animal-card" onclick="selecionarAnimal('suino')">
+                  <img src="images/animais/pig.png" alt="Suíno">
+                  <p>Suíno</p>
+                </div>
+                <div class="animal-card" onclick="selecionarAnimal('bovino')">
+                  <img src="images/animais/cow.png" alt="Bovino">
+                  <p>Bovino</p>
+                </div>
+                <div class="animal-card" onclick="selecionarAnimal('caprino')">
+                  <img src="images/animais/goat.png" alt="Caprino">
+                  <p>Caprino</p>
+                </div>
+                <div class="animal-card" onclick="selecionarAnimal('ovino')">
+                  <img src="images/animais/sheep.png" alt="Ovino">
+                  <p>Ovino</p>
+                </div>
+
+                <!-- modo avançado -->
+                <div class="animal-card advanced-card" onclick="window.location.href='pearsonAvancada.html'">
+                  <img src="images/animais/avancado.png" alt="Modo Avançado">
+                  <p>Modo Técnico (Avançado)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela intermediária: apresentação das exigências nutricionais -->
+        <div class="animal-info slide-card hidden" id="animalInfo">
+          <h2 id="animalTitle">Animal</h2>
+          <img id="animalImage" src="" alt="Animal Selecionado">
+          <ul id="animalNutrients"></ul>
+          <div class="botao-container">
+            <button class="back-btn" onclick="voltarAnimalSelection()">← Retornar</button>
+            <button class="next-btn" onclick="irParaModoCalculo()">Calcular →</button>
+          </div>
+        </div>
+  </main>
+
+  <footer class="bottom-nav">
+        <a href="index.html" class="nav-link" id="nav-inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-9 2v10m4 0V10m5 10h2a2 2 0 002-2v-7a2 2 0 00-.586-1.414L12 3 3.586 10.586A2 2 0 003 12v7a2 2 0 002 2h2" />
+            </svg>
+            <span>Início</span>
+        </a>
+
+        <a href="calculadoraPearson.html" class="nav-link" id="nav-calculadora">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5h6M9 9h6M9 13h6m-6 4h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
+            </svg>
+            <span>Calculadora</span>
+        </a>
+
+        <a href="requisitosNutricionais.html" class="nav-link" id="nav-requisitos">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8M8 8h8M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+            <span>Requisitos</span>
+        </a>
+
+        <a href="racoesMontadas.html" class="nav-link" id="nav-racoes">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7M5 7h14" />
+            </svg>
+            <span>Rações</span>
+        </a>
+    </footer>
+
+    <script src="script/menuHamburguer.js"></script>
+    <script src="script/seletorAnimais.js"></script>
+    <script src="script/navBarAtivo.js"></script>
+</body>
+
+</html>

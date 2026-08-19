@@ -1,0 +1,204 @@
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ===== Cabeçalho e Botões ===== */
+.titulo-fixo {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 15px 20px;
+    border-bottom: 2px solid rgba(141, 77, 34, 0.3);
+    z-index: 10;
+    text-align: center;
+}
+
+.titulo-fixo h1 {
+    font-size: 1.8rem;
+    color: rgb(141, 77, 34);
+    margin-bottom: 10px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.acoes button {
+    background: #af784c;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.acoes button:hover {
+    background: #8e5e3a;
+}
+
+/* ===== Lista ===== */
+.lista-scroll {
+    overflow-y: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.racao-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+}
+
+.racao-card input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-top: 5px;
+}
+
+.racao-card h3 {
+    margin: 0;
+    color: #af784c;
+    font-size: 1.1rem;
+}
+
+.racao-detalhes {
+    font-size: 0.95rem;
+    color: #444;
+    margin-top: 5px;
+}
+
+.nenhuma-racao {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  padding: 20px 0;
+}
+
+/* ===== Tela de Aviso ===== */
+.tela-aviso {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.aviso-conteudo {
+  background: #fff;
+  color: #222;
+  padding: 25px 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+  animation: fadeAviso 0.3s ease;
+}
+
+.aviso-conteudo h2 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.aviso-conteudo p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.botoes-aviso {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.botoes-aviso button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+#btnConfirmarAviso {
+  background-color: #af784c;
+  color: #fff;
+}
+
+#btnConfirmarAviso:hover {
+  background-color: #a06245;
+}
+
+#btnCancelarAviso {
+  background-color: #999;
+  color: #fff;
+}
+
+#btnCancelarAviso:hover {
+  background-color: #777;
+}
+
+/* ===== Animações ===== */
+@keyframes fadeAviso {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Transições Suaves ===== */
+.fade-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: aparecer 0.4s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  transform: scale(1);
+  animation: desaparecer 0.3s forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes desaparecer {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}

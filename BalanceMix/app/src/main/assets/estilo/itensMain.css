@@ -1,0 +1,118 @@
+.app-layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80vh;
+    padding: 20px 20px 40px 20px;
+    gap: 30px;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Icone principal */
+.main-app{
+    background-color: rgba(255, 239, 213, 0.8);
+    border: 2px solid #ffa07a;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50%;
+    max-width: 90%;
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn{
+    from { opacity: 0; transform: scale(0.9); }
+    to {opacity: 1; transform: scale(1); }
+}
+
+.main-app:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25)
+}
+
+.main-app a{
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-app img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.main-app span{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Barra inferior com opções secundárias */
+.bottom-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Ícones de apps */
+.app-icon{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 15px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3 ease, background-color 0.3s ease;
+    text-align: center;
+    flex: 1 1 30%;
+    max-width: 120px;
+    min-width: 80px;
+    animation: slideIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.app-icon:nth-child(1) { animation-delay: 0.1s; }
+.app-icon:nth-child(2) { animation-delay: 0.2s; }
+.app-icon:nth-child(3) { animation-delay: 0.3s; }
+
+.app-icon:hover{
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Foco ou ativo */
+.app-icon.active,
+.app-icon:focus-within{
+    outline: 2px solid #ffa07a;
+    background-color: rgba(255, 228, 196, 0.9);
+    transform: scale(1.06);
+}
+
+.app-icon a{
+    text-decoration: none;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-icon img{
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+}
+
+.app-icon span{
+    font-size: 0.95rem;
+    font-weight: 500;
+}

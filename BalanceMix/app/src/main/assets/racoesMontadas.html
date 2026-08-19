@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tela Rações Salvas">
+    <meta name="author" content="Hilton Bruce">
+    <link rel="stylesheet" href="estilo/base.css">
+    <link rel="stylesheet" href="estilo/baseInicial.css">
+    <link rel="stylesheet" href="estilo/baseResponsiva.css">
+    <link rel="stylesheet" href="estilo/hamburguerMenu.css">
+    <link rel="stylesheet" href="estilo/scroll.css">
+    <link rel="stylesheet" href="estilo/montadas.css">
+    <title>Rações Montadas</title>
+</head>
+    
+    <script src="./script/racoes.js"></script>
+
+<body>
+
+    <main id="conteudo">
+        <!-- Cabeçalho fixo com título e botões -->
+        <header class="titulo-fixo">
+            <h1>Rações Salvas</h1>
+            <div class="acoes">
+                <button id="btnDeletarSelecionadas">🗑️ Apagar Selecionadas</button>
+                <button id="btnLimparTodas">🗑️ Apagar Todas</button>
+                <button id="btnCancelarSelecao" class="hidden">❌ Cancelar Seleção</button>
+            </div>
+        </header>
+
+        <!-- Lista de rações rolável -->
+        <section id="listaRacoes" class="lista-scroll"></section>
+    </main>
+
+        <!-- Tela intermediária de aviso -->
+    <div id="telaAviso" class="tela-aviso hidden">
+    <div class="aviso-conteudo">
+        <h2 id="tituloAviso">Aviso</h2>
+        <p id="mensagemAviso">Mensagem do sistema...</p>
+        <div class="botoes-aviso">
+        <button id="btnConfirmarAviso">Confirmar</button>
+        <button id="btnCancelarAviso">Cancelar</button>
+        </div>
+    </div>
+    </div>
+
+    <footer class="bottom-nav">
+        <a href="index.html" class="nav-link" id="nav-inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7m-9 2v10m4 0V10m5 10h2a2 2 0 002-2v-7a2 2 0 00-.586-1.414L12 3 3.586 10.586A2 2 0 003 12v7a2 2 0 002 2h2" />
+            </svg>
+            <span>Início</span>
+        </a>
+
+        <a href="calculadoraPearson.html" class="nav-link" id="nav-calculadora">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 5h6M9 9h6M9 13h6m-6 4h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
+            </svg>
+            <span>Calculadora</span>
+        </a>
+
+        <a href="requisitosNutricionais.html" class="nav-link" id="nav-requisitos">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 16h8M8 12h8M8 8h8M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+            <span>Requisitos</span>
+        </a>
+
+        <a href="racoesMontadas.html" class="nav-link ativo" id="nav-racoes">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 13l4 4L19 7M5 7h14" />
+            </svg>
+            <span>Rações</span>
+        </a>
+    </footer>
+</body>
+
+    <script src="script/menuHamburguer.js"></script>
+    <script src="script/navBarAtivo.js"></script>    
+
+</html>

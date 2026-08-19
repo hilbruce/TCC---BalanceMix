@@ -1,0 +1,20 @@
+/* Estilo para navegadores baseados em WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(141, 77, 34);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #af784c;
+    border-radius: 10px;
+    border: 2px solid #613131;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a06245;
+  }

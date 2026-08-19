@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este é o index">
+    <meta name="author" content="Hilton Bruce">
+    <link rel="stylesheet" href="estilo/base.css">
+    <link rel="stylesheet" href="estilo/baseInicial.css">
+    <link rel="stylesheet" href="estilo/baseResponsiva.css">
+    <link rel="stylesheet" href="estilo/itensMain.css">
+    <link rel="stylesheet" href="estilo/footerBotoes.css">
+    <title>Inicial</title>
+</head>
+
+<body>
+    <!-- Conteúdo principal -->
+    <main id="conteudo">
+        <section class="app-layout">
+            <!-- Título da página -->
+            <div class="titulo-principal">
+                <h1>BalanceMix</h1>
+            </div>
+            <!-- ícone central em destaque -->
+            <div class="main-app">
+                <a href="calculadoraPearson.html">
+                    <img src="images/weight.png" alt="Calculadora Pearson">
+                    <span>Calculadora Pearson</span>
+                </a>
+            </div>
+            
+            <!-- Barra inferior com os outros apps -->
+             <div class="bottom-bar">
+                <div class="app-icon">
+                    <a href="requisitosNutricionais.html">
+                        <img src="images/zoology.png" alt="Requisitos Nutricionais">
+                        <span>Requisitos Nutricionais</span>
+                    </a>
+                </div>
+                <div class="app-icon">
+                    <a href="racoesMontadas.html">
+                        <img src="images/notes.png" alt="Racoes Montadas">
+                        <span>Rações<br>Salvas</span>
+                    </a>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bottom-nav">
+        <a href="index.html" class="nav-link" id="nav-inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-9 2v10m4 0V10m5 10h2a2 2 0 002-2v-7a2 2 0 00-.586-1.414L12 3 3.586 10.586A2 2 0 003 12v7a2 2 0 002 2h2" />
+            </svg>
+            <span>Início</span>
+        </a>
+
+        <a href="calculadoraPearson.html" class="nav-link" id="nav-calculadora">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5h6M9 9h6M9 13h6m-6 4h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
+            </svg>
+            <span>Calculadora</span>
+        </a>
+
+        <a href="requisitosNutricionais.html" class="nav-link" id="nav-requisitos">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8M8 8h8M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+            <span>Requisitos</span>
+        </a>
+
+        <a href="racoesMontadas.html" class="nav-link" id="nav-racoes">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7M5 7h14" />
+            </svg>
+            <span>Rações</span>
+        </a>
+    </footer>
+
+    <script src="script/menuHamburguer.js"></script>
+    <script src="script/footerBotoes.js"></script>
+    <script src="script/navBarAtivo.js"></script>
+</body>
+
+</html>

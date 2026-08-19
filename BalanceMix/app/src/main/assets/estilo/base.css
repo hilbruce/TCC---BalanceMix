@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    background-image: url(../images/fundoBase.png);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body, html, * {
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;
+    -webkit-touch-callout: none; /* Remove menu contextual em iOS */
+    -webkit-user-drag: none;     /* Chrome, Safari */
+    -webkit-tap-highlight-color: transparent; /* remove highlight no mobile */
+}
+
+/* Espaço para o conteúdo */
+main{
+    padding-top: 80px;
+}
+  
+/* Efeito slide-in suave */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+/* Aplica o slide-in ao conteúdo principal */
+main#conteudo {
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Nav Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(141, 77, 34);
+  border-top: 1px solid rgb(141, 77, 34);
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fdb767;
+}
+
+.nav-link .icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+  stroke-width: 1.8;
+}
+
+/* Página ativa */
+.nav-link.active {
+  color: #fdb767;
+}
+
+.nav-link.active .icon {
+  stroke: #fdb767;
+}
+
+
+  

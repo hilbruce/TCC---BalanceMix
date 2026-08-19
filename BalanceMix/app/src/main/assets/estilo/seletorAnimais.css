@@ -1,0 +1,153 @@
+body{
+  background-image: url("../images/fundoCalc.png");
+}
+
+/* Container da seleção de animais */
+.animal-selection {
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 0.6s ease-out;
+  }
+  
+  .animal-selection h2 {
+    margin-bottom: 20px;
+    color: #4a2f1d;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: rgba(250, 235, 215, 0.9);
+    padding: 5px 10px;
+    border-radius: 20px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .animal-cards {
+    margin-top: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .animal-card {
+    background: rgba(250, 235, 215, 0.9);
+    border-radius: 20px;
+    padding: 15px;
+    width: 130px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .animal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .animal-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .animal-card p {
+    margin: 0;
+    font-weight: 600;
+    color: #3e2b1c;
+  }
+  
+  .animal-info {
+    text-align: center;
+    padding: 20px;
+    animation: slideIn 0.6s ease-out;
+  }
+  
+  .animal-info h2 {
+    margin-top: 150px;
+    font-size: 1.6rem;
+    color: #4a2f1d;
+    font-weight: 600;
+  }
+  
+  .animal-info img {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0;
+  }
+
+  #animalTitle{
+    margin-bottom: 20px;
+    color: #4a2f1d;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: rgba(250, 235, 215, 0.9);
+    padding: 5px 10px;
+    border-radius: 20px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #animalNutrients {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  #animalNutrients li {
+    margin: 10px 0;
+    background: #fff3e0;
+    padding: 10px 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+  }
+  
+.botao-container {
+  display: flex;
+  justify-content: center; /* Centraliza os botões lado a lado */
+  gap: 20px; /* Espaçamento entre os botões */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.back-btn {
+  background-color: #fff3e0;
+  color: #a55b2d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 180px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-btn {
+  background-color: #fff3e0;
+  color: #a55b2d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover,
+.next-btn:hover {
+  background-color: #a55b2d;
+  color: #fff3e0;
+}
+  
+/* Transição de páginas estilo "cards" */
+.slide-card {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  will-change: transform, opacity;
+}
+  
+.hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+  
